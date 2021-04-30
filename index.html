@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="icon.png">
+<title>Cable Coil</title>
+<style>
+ body{
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+/*header starts here*/
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  background-image: url("slight-tilt-blur.png");
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #000;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: white;
+  color: black;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/*Header ends here*/
+/*main content starts here*/
+
+.content{
+    padding: 10px;
+    color: white;
+}
+
+.product-pic{
+    float: right;
+
+}
+
+.penis{
+    padding-top: 150px;
+    padding-bottom: 300px;
+    padding-right: 10px;
+}
+
+.headhighlight{
+    font-weight: bold;
+}
+
+.info li{
+    text-align: center;
+    list-style: none;
+    border-radius: 5pt;
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    display: inline-block;
+    padding: 30px;´
+    color: white;
+}
+
+.info{
+    padding-bottom: 200px;
+    text-align: center;
+    color: white;
+}
+
+.midpiece{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.productdesc{
+    text-align: center;
+}
+
+/*main content ends here*/
+/*footer starts here*/
+    .footer{
+        text-align: center;
+        font-size: 16px;
+        background-color: gray;
+        padding: 10px;
+        color: white;
+    }
+/*footer ends here*/
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Cable Coil</h2>
+  <p>Nie wieder Kabelsalat mit <span class="headhighlight">Cable Coil</span></p>
+</div>
+
+<div id="navbar">
+  <a class="active" href="index2.html">Startseite</a>
+  <a href="coilProd.html">Produkte</a>
+  <a href="javascript:void(0)">Impressum</a>
+</div>
+
+<div class="product-pic">
+        <img src="cock.png" width="826" height="546">
+    </div>
+<div class="content">
+    <div class="penis">
+    <p class="productdesc">Durch das innovative und intuitive Design kann Cable Coil von jedem Käufer benutzt werden.</p>
+</div>
+</div>
+<div class="info">
+    <li><img src="rocket.png" width="108" height="108" alt="Badewasser"><h4><br>Schnelle Lieferung<br></h4></li>
+    <li class="midpiece"><img src="lego.png" width="108" height="108" alt="Toilette"><h4><br>Einfache Benutzung&nbsp;</h4></li>
+    <li><img src="crop.png" width="108" height="108" alt="BonBons"><h4><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Innovativ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></h4></li>
+  </div>
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+    <div class="footer"> <p>&copy;CableCoil GmbH 2021</p><p>cablecoil@gmail.com</p><p>owned by Robin Schulze and Till Wagner</p></div>
+
+</body>
+</html>
