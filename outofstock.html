@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="icon.png">
+<title>Cable Coil</title>
+<style>
+ body{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  background-image: url("backgroundcock.png");
+}
+/*header starts here*/
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  background-image: url("slight-tilt-blur.png");
+}
+
+#navbar {
+  overflow: hidden;
+  background-image: linear-gradient(to right, rgb(153, 197, 176), rgb(50, 143, 134));
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-image: url("background.png");
+  color: white;
+}
+
+#navbar a.active {
+  background-image: url("background.png");
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/*Header ends here*/
+/*main content starts here*/
+.penis{
+  position: fixed;
+  color: white;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+}
+/*main content ends here*/
+/*footer starts here*/
+    .footer{
+        text-align: center;
+        font-size: 14px;
+        background-color: gray;
+        padding: 5px;
+        color: white;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+/*footer ends here*/
+
+@media only screen and (max-width:600px){
+
+  .headtxt{
+    padding: 45px 10px 45px 10px;
+
+  }
+
+  .footer{
+    margin-bottom: 0px;
+    font-size: 10px;
+  } 
+
+  .penis{
+    color: white;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Cable Coil</h2>
+  <p>Nie wieder Kabelsalat mit <span class="headhighlight">Cable Coil</span></p>
+</div>
+
+<div id="navbar">
+  <a  href="index.html">Startseite</a>
+  <a href="imp.html">Impressum</a>
+</div>
+
+
+<div class="content">
+    <div class="penis">
+    <h3 class="productdesc">
+      Leider ist der Cable Coil zurzeit ausverkauft.<br> Wir sind in diesem Moment schon dabei weite zu Produzieren!
+    </h3>
+</div>
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+    <div class="footer"> 
+      <p>&copy;CableCoil GmbH 2021</p>
+      <p>cablecoil2021@gmail.com</p>
+      <p>owned by Robin Schulze and Till Wagner</p>
+    </div>
+
+</body>
+</html>
