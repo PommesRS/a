@@ -3,8 +3,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="icon.png">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <title>Cable Coil</title>
+<script>
 
+</script>
 <style>
 
   *{
@@ -142,23 +145,26 @@ a:visited{
 .getstarted{
         display: inline-block;
         text-align: center;
-        background-color: rgb(153, 197, 176);
-        border-radius: 5px;
-        padding: 0.1in;
+        border: 3px solid rgba(153, 197, 176, 1);
+        border-radius: 8px;
+        padding: 10px 20px 10px 20px;
         color: white;
         cursor: pointer;  
         font-weight: bold;
         font-size: 35px;
-        transition: background 0.5s;  
+        transition: all 0.5s ease;
+        box-shadow: inset 0 0 0 0 rgb(153, 197, 176);
     }
 
     .getstarted:hover{
-        background-color: rgb(50, 143, 134);
+        box-shadow: inset 10px 10px 30px 30px rgba(153, 197, 176, 1);
+        border: 3px solid rgba(153, 197, 176, 1);
+        color: black;
     }
 
     .cock{
-      margin-top: 50px;
-      margin-bottom: -50px;
+      margin: 50px;
+      padding: 0px;
     }
 
     .teaser{
@@ -171,7 +177,6 @@ a:visited{
     .product-pic2{
       display: none;
     }
-
 /*main content ends here*/
 /*footer starts here*/
     .footer{
@@ -203,6 +208,11 @@ a:visited{
     .product-pic2{
       display: block;
       padding: 15px 0px 15px 0px;
+    }
+
+    .product-pic2 h2{
+      font-style: italic;
+      font-weight: 700;
     }
 
     .vid{
@@ -259,6 +269,12 @@ a:visited{
       margin: 0px;
     }
 
+    .getstarted:hover{
+      box-shadow: inset 0px 0px 0px 0px rgba(153, 197, 176, 1);
+      border: 3px solid rgba(153, 197, 176, 1);
+      color: white;
+    }
+
     .footer{
       font-size: 10px;
     }
@@ -282,19 +298,20 @@ a:visited{
 
 <div class="content">
     <div class="penis">
-    <p class="productdesc">Entdecken Sie jetzt die neuste Errungenschaft der Technick<br> <span class="headhighlight">Cable Coil</span></p>
+    <p class="productdesc" data-aos-duration="1000" data-aos="fade-up">Entdecken Sie jetzt die neuste Errungenschaft der Technick<br> <span class="headhighlight">Cable Coil</span></p>
 </div>
-<div class="product-pic">
+<div class="product-pic" >
         <img src="slighttiltwhite.png">
     </div>
   <center class="product-pic2">
+      <h2>Cable Coil</h2>
       <img src="slighttiltcut2.png" width="225" height="236">
   </center>
 </div>
 
 
 <div class="info">
-    <div class="proddesc">
+    <div class="proddesc" data-aos-duration="1000" data-aos="fade-up">
       <h3>Produktbeschreibung</h3>
         <p> 
           <br><br>  In der Mitte des Hauptzylinders sitzt ein kleiner Motor,
@@ -303,21 +320,23 @@ a:visited{
           Wenn Sie unser Produkt kaufen, werden Sie nie wieder mit Kabelsalat kämpfen!
         </p>   
       </div>  
-      <div class="teaser">
+      <div class="teaser" data-aos-duration="1000" data-aos="fade-up">
         <iframe class="vid" width="932" height="524" src="https://www.youtube.com/embed/-i7OxiuLxsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
-    <li><img src="rocket.png" width="72" height="72" alt="Badewasser"><h4><br>Schnelle Lieferung<br></h4></li>
-    <li class="midpiece"><img src="lego.png" width="72" height="72" alt="Toilette"><h4><br>Einfache Benutzung</h4></li>
-    <li><img src="crop.png" width="72" height="72" alt="BonBons"><h4><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Innovativ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></h4></li>
+    <li data-aos-duration="1000" data-aos=fade-up><img src="rocket.png" width="72" height="72" alt="Badewasser"><h4><br>Schnelle Lieferung<br></h4></li>
+    <li class="midpiece" data-aos-duration="1000" data-aos="fade-up"><img src="lego.png" width="72" height="72" alt="Toilette"><h4><br>Einfache Benutzung</h4></li>
+    <li data-aos-duration="1000" data-aos="fade-up"><img src="crop.png" width="72" height="72" alt="BonBons"><h4><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Innovativ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></h4></li>
 
     <div class="cock">
-      <p class="getstarted">Jetzt Kaufen! 9,99€</p>
+      <p class="getstarted" data-aos-duration="1000" data-aos="slide-right">Jetzt Kaufen! 9,99€</p>
     </div>
 
   </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    window.onscroll = function() {myFunction()};
+
+  window.onscroll = function() {myFunction()};
     
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
@@ -329,7 +348,12 @@ a:visited{
         navbar.classList.remove("sticky");
       }
     }
-    </script>
+
+  AOS.init();
+
+  </script>
+    
+    
 
     <div class="footer"> 
       <p>&copy;CableCoil GmbH 2021</p>
