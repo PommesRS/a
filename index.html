@@ -22,7 +22,7 @@
   padding: 0;
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+  background: black;
 }
 /*header starts here*/
 .header {
@@ -38,7 +38,7 @@
 
 #navbar {
   overflow: hidden;
-  background-image: linear-gradient(to right, rgba(153, 197, 176, 0.8), rgba(50, 143, 134, 0.8));
+  background-image: linear-gradient(to right, rgba(153, 197, 176), rgba(50, 143, 134));
 }
 
 #navbar a {
@@ -46,7 +46,7 @@
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 19px 16px;
   text-decoration: none;
   font-size: 17px;
   overflow: hidden;
@@ -186,6 +186,25 @@ a:visited{
 
     .product-pic2{
       display: none;
+    }
+
+    ::-webkit-scrollbar{
+      width: 15px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      /*background: linear-gradient( rgb(153, 197, 176), rgb(50, 143, 134));*/
+      background: rgb(153, 197, 176);
+      border-radius: 0px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+      background: linear-gradient( rgb(153, 197, 176), rgb(30, 87, 81));
+    }
+
+    ::-webkit-scrollbar-track{
+      background: black;
+
     }
 
 /*main content ends here*/
