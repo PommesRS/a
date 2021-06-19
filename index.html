@@ -25,6 +25,40 @@
   background: black;
 }
 /*header starts here*/
+
+#scrollPath{
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+}
+
+#progressbar{
+  position: fixed;
+  top: 0px;
+  height: 10px;
+  background: red;
+}
+
+#progressbar:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#progressbar:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .header {
   background-color: #f1f1f1;
   background-image: url("slight-tilt-blur.png");
@@ -44,7 +78,6 @@
 #navbar a {
   float: left;
   display: block;
-  color: white;
   text-align: center;
   padding: 19px 16px;
   text-decoration: none;
@@ -54,13 +87,11 @@
 
 #navbar a:hover {
   background-image: url("background.png");
-  color: white;
   overflow: hidden;
 }
 
 #navbar a.active {
   background-image: url("background.png");
-  color: white;
   overflow: hidden;
 }
 
@@ -135,12 +166,11 @@
     text-align: center;
 }
 
-a{
-  color: white;
+#navbar a{
   text-decoration: none;
 }
 
-a:visited{
+#navbar a:visited{
   color: white;
   text-decoration: none;
 }
@@ -149,23 +179,57 @@ a:visited{
  text-align: center;
 }
 
-.getstarted{
+    .kok{
+        text-decoration: none;
+        position: relative;
         display: inline-block;
-        text-align: center;
-        border: 3px solid rgba(153, 197, 176, 1);
-        border-radius: 8px;
-        padding: 10px 20px 10px 20px;
-        color: white;
+        padding: 15px 30px;
+        color: rgb(153, 197, 176);
+        text-transform: uppercase;
+        letter-spacing: 3px;
         cursor: pointer;  
-        font-weight: bold;
-        font-size: 35px;
-        transition: box-shadow 500ms ease;
-        box-shadow: inset 0 0 0 0 rgb(153, 197, 176);
+        font-size: 30px;
+        overflow: hidden;
+        transition: 0.2s;
     }
 
-    .getstarted:hover{
-        box-shadow: inset 10px 10px 30px 30px rgb(153, 197, 176);
-        color: black;
+    .kok:hover{
+        color: white;
+        background-color: rgba(50, 143, 134);
+        box-shadow: 0 0 10px rgba(50, 143, 134), 0 0 10px rgba(50, 143, 134), 0 0 40px rgba(50, 143, 134), 0 0 80px rgba(50, 143, 134);
+        transition-delay: .39s;
+    }
+
+    .kok span{
+      position: absolute;
+      display: block;
+    }
+
+    .kok span:nth-child(1){
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(50, 143, 134));
+    }
+
+    .kok:hover span:nth-child(1){
+      left: 100%;
+      transition: 1s;
+    }
+
+    .kok span:nth-child(2){
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, rgba(50, 143, 134));
+    }
+
+    .kok:hover span:nth-child(2){
+      right: 100%;
+      transition: 1s;
+      transition-delay: 0s;
     }
 
     .cock{
@@ -203,9 +267,8 @@ a:visited{
     }
 
     ::-webkit-scrollbar-track{
-      background: black;
-
-    }
+      background: black
+    } 
 
 /*main content ends here*/
 /*footer starts here*/
@@ -326,6 +389,8 @@ a:visited{
 </head>
 <body>
 
+  
+
 <div class="header">
   <div class="headtxt" data-aos-duration="1000" data-aos="fade-down"><h2>Cable Coil</h2>
   <p>Nie wieder Kabelsalat mit <span class="headhighlight">Cable Coil</span></p>
@@ -333,6 +398,8 @@ a:visited{
 </div>
 
 <div id="navbar">
+  <div id="progressbar"></div>
+  <div id="scrollPath"></div>
   <a class="active" href="index.html">Startseite</a>
   <a href="imp.html">Impressum</a>
 </div>
@@ -377,15 +444,24 @@ a:visited{
       </div>
 
     <div class="cock">
-      <a href="outofstock.html"><p class="getstarted">Jetzt Kaufen! 9,99€</p></a>
+      <a class="kok" href="outofstock.html">
+        <span></span>
+        <span></span>
+        Jetzt Kaufen! 9,99€
+      </a>
     </div>
 
   </div>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
 
+  window.addEventListener('scroll', () => {
+      const penis = window.scrollY;
+      console.log('penis');
+    });
+
   window.onscroll = function() {myFunction()};
-    
+
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
     
